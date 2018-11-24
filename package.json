@@ -1,26 +1,27 @@
 {
-  "name": "tittu",
-  "version": "1.0.0",
-  "description": "Intellegent Telegram Boy",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sathyakps/tittu.git"
-  },
-  "author": "sathyakps@yahoo.com",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sathyakps/tittu/issues"
-  },
-  "homepage": "https://github.com/sathyakps/tittu#readme",
-  "dependencies": {
-    "axios": "^0.18.0",
-    "lodash": "^4.17.11",
-    "money": "^0.2.0",
-    "node-telegram-bot-api": "^0.30.0",
-    "telegraf": "^3.25.0"
-  }
+	"name": "tittu",
+	"version": "1.0.0",
+	"description": "Intellegent Telegram Boy",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sathyakps/tittu.git"
+	},
+	"author": "sathyakps@yahoo.com",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/sathyakps/tittu/issues"
+	},
+	"homepage": "https://github.com/sathyakps/tittu#readme",
+	"dependencies": {
+		"axios": "^0.18.0",
+		"lodash": "^4.17.11",
+		"money": "^0.2.0",
+		"node-telegram-bot-api": "^0.30.0",
+		"telegraf": "^3.25.0"
+	}
 }
