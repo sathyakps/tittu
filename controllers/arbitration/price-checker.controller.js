@@ -100,23 +100,38 @@ exports.checkDifference = async (cex, bitbns, koinex) => {
 	var xrpbitbnsDifferenceUSD = Number(bitbns['xrpData']['bid'] - cex['xrpData']['USD']['ask']).toFixed(2);
 	var xrpKoinexDifferenceUSD = Number(koinex['xrpData']['bid'] - cex['xrpData']['USD']['ask']).toFixed(2);
 
-	tittu.sendMessage(
-		'@TittuOfficial',
-		`************** Bitbns ******************
-		XLM EUR Profit: ${xlmbitbnsDifferenceEURO} 
-		XLM USD Profit: ${xlmbitbnsDifferenceUSD}
-
-		XRP EUR Profit: ${xrpbitbnsDifferenceEURO}
-		XRP USD Profit: ${xrpbitbnsDifferenceUSD} 
+	var messageString = `U+1F4B0 U+1F4B0 U+1F4B0 U+1F4B0      Trade Alert     U+1F4B0 U+1F4B0 U+1F4B0 U+1F4B0
+	
+	
+	`;
+	if (
+		xlmbitbnsDifferenceEURO >= 0.5 ||
+		xlmKoinexDifferenceEURO >= 0.5 ||
+		xlmbitbnsDifferenceUSD >= 0.5 ||
+		xlmKoinexDifferenceUSD >= 0.5 ||
+		xrpbitbnsDifferenceEURO >= 1 ||
+		xrpKoinexDifferenceEURO >= 1 ||
+		xrpbitbnsDifferenceUSD >= 1 ||
+		xrpKoinexDifferenceUSD >= 1
+	) {
+		tittu.sendMessage(
+			'@TittuOfficial',
+			`************** Bitbns ******************
+				XLM EUR Profit: ${xlmbitbnsDifferenceEURO} 
+				XLM USD Profit: ${xlmbitbnsDifferenceUSD}
 		
-		*************** Koinex ****************
-		XLM EUR Profit: ${xlmKoinexDifferenceEURO} 
-		XLM USD Profit: ${xlmKoinexDifferenceUSD}
-
-		XRP EUR Profit: ${xrpKoinexDifferenceEURO}
-		XRP USD Profit: ${xrpKoinexDifferenceUSD} 
-		`
-	);
+				XRP EUR Profit: ${xrpbitbnsDifferenceEURO}
+				XRP USD Profit: ${xrpbitbnsDifferenceUSD} 
+				
+				*************** Koinex ****************
+				XLM EUR Profit: ${xlmKoinexDifferenceEURO} 
+				XLM USD Profit: ${xlmKoinexDifferenceUSD}
+		
+				XRP EUR Profit: ${xrpKoinexDifferenceEURO}
+				XRP USD Profit: ${xrpKoinexDifferenceUSD} 
+				`
+		);
+	}
 };
 
 exports.getForexRate = async () => {
