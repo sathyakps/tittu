@@ -1,7 +1,7 @@
-var arbiration = require('./controllers/arbitration/price-checker.controller');
+var arbiration = require('./controllers/comparision.controllers');
 console.log('Starting APP');
 setInterval(() => {
-	arbiration.checkCryptoDifference();
+	arbiration.compareCoin();
 }, 120000);
 
 const express = require('express');
