@@ -30,6 +30,7 @@ exports.compareCoin = async () => {
 				Coin	           : ${maximumSell.coin}
 				Buy Exch    : ${minimumBuy.market}
 				Sell Exch    : ${maximumSell.market}
+				Buy Currency  : ${minimumBuy.buyCurrency || 'INR'}
 				Buy Price   : ${minimumBuy.buy}
 				Sell Price   : ${maximumSell.sell}
 				Profit/coin : ${Number(maximumSell.sell - minimumBuy.buy).toFixed(2)} (${(

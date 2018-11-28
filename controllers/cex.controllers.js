@@ -15,7 +15,7 @@ exports.getAllCoins = async () => {
 			delete element['timestamp'];
 			if (element.pair.includes('EUR')) {
 				element.last = Number((Number(element.last) * 1.1 * forexRate.EUR).toFixed(2));
-				element.sell = Number((Number(element.bid) * 1.1 * forexRate.EUR).toFixed(2));
+				element.sell = Number((Number(element.bid) * 0.99 * forexRate.EUR).toFixed(2));
 				element.buy = Number((Number(element.ask) * 1.1 * forexRate.EUR).toFixed(2));
 				delete element['volume'];
 				delete element['volume30d'];
