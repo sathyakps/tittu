@@ -26,7 +26,7 @@ exports.getAllCoins = async () => {
 				element['buyCurrency'] = 'EURO';
 			} else if (element.pair.includes('USD')) {
 				element.last = Number((Number(element.last) * 1.1 * forexRate.USD).toFixed(2));
-				element.sell = Number((Number(element.bid) * 1.1 * forexRate.USD).toFixed(2));
+				element.sell = Number((Number(element.bid) * 0.99 * forexRate.USD).toFixed(2));
 				element.buy = Number((Number(element.ask) * 1.1 * forexRate.USD).toFixed(2));
 				delete element['volume'];
 				delete element['volume30d'];
