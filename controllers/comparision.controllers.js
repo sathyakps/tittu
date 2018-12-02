@@ -14,8 +14,8 @@ exports.compareCoin = async () => {
 		...(await koinex.getAllCoins()),
 		...(await coindelta.getAllCoins()),
 		...(await bitbns.getAllCoins()),
-		...(await coindcx.getAllCoins()),
-		...(await wazirx.getAllCoins())
+		...(await coindcx.getAllCoins())
+
 	];
 	var uniqueCoins = _.uniq(_.map(allcoins, 'coin'));
 	for (let index = 0; index < uniqueCoins.length; index++) {
