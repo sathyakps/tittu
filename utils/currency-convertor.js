@@ -4,10 +4,6 @@ var currency = axios.create({
 	baseURL: 'https://free.currencyconverterapi.com/api/v6/convert'
 });
 
-var tittuApp = axios.create({
-	baseURL: 'https://tittu.herokuapp.com'
-});
-
 exports.getForexRate = async () => {
 	var data = await currency.get('/', {
 		params: {
