@@ -45,6 +45,14 @@ Reason:${e.message}`
 module.exports.getOpenRange = async () => {
 	try {
 		var data = await axios.get('https://tittu-nse.herokuapp.com/get-range');
+		tittuBot.sendMessage(333993654, 'hi', {
+			chat_id: 333993654,
+			text: 'Trade Triggered. Confirm Now',
+			parse_mode: 'HTML',
+			reply_markup: JSON.stringify({
+				inline_keyboard: [[{ text: 'Trade', url: 'https://tittu-nse.herokuapp.com/place' }]]
+			})
+		});
 	} catch (e) {
 		tittuBot.sendMessage(
 			333993654,
