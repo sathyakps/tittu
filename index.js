@@ -1,12 +1,14 @@
-var arbiration = require('./controllers/comparision.controllers');
-var international = require('./controllers/international/international.comparision.controllers');
+// var arbiration = require('./controllers/comparision.controllers');
+// var international = require('./controllers/international/international.comparision.controllers');
+// var tittu = require('./utils/telegram');
+var scheduler = require('./utils/scheduler');
 
-var tittu = require('./utils/telegram');
 console.log('Starting APP');
-setInterval(() => {
-	arbiration.compareCoin();
-	international.compareCoin();
-}, 60000);
+
+// setInterval(() => {
+// 	arbiration.compareCoin();
+// 	international.compareCoin();
+// }, 60000);
 
 const express = require('express');
 const app = express();
