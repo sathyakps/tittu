@@ -25,8 +25,8 @@ var getStockPrice = schedule.scheduleJob(rule1, async function() {
 var rule2 = new schedule.RecurrenceRule();
 rule2.dayOfWeek = [1, 2, 3, 4, 5];
 rule2.hour = 9;
-rule2.minute = 29;
-rule2.second = 30;
+rule2.minute = 30;
+rule2.second = 0;
 var getStockPrice = schedule.scheduleJob(rule2, async function() {
 	await tittu_nse.getOpenRange();
 });
