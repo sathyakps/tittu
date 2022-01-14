@@ -11,8 +11,7 @@ exports.compareCoin = async () => {
 	var messageString = ``;
 	var allcoins = [
 		...(await cex.getAllCoins()),
-		...(await koinex.getAllCoins()),
-		...(await coindelta.getAllCoins()),
+		
 		...(await bitbns.getAllCoins()),
 		...(await coindcx.getAllCoins())
 
@@ -26,7 +25,7 @@ exports.compareCoin = async () => {
 			var maximumSell = _.maxBy(allExchangeCoin, 'sell');
 			if (
 				maximumSell.sell > minimumBuy.buy &&
-				Number(((maximumSell.sell - minimumBuy.buy) / minimumBuy.buy) * 100).toFixed(2) >= 4
+				Number(((maximumSell.sell - minimumBuy.buy) / minimumBuy.buy) * 100).toFixed(2) >= 7
 			) {
 				var temp = {};
 				temp['buyExchange'] = minimumBuy.market;
