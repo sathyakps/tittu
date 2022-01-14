@@ -7,7 +7,7 @@ console.log('Starting APP');
 
  setInterval(() => {
  	arbiration.compareCoin();
- 	international.compareCoin();
+ 	// international.compareCoin();
  }, 60000);
 
 const express = require('express');
