@@ -25,7 +25,7 @@ exports.compareCoin = async () => {
 			var maximumSell = _.maxBy(allExchangeCoin, 'sell');
 			if (
 				maximumSell.sell > minimumBuy.buy &&
-				Number(((maximumSell.sell - minimumBuy.buy) / minimumBuy.buy) * 100).toFixed(2) >= 0.1
+				Number(((maximumSell.sell - minimumBuy.buy) / minimumBuy.buy) * 100).toFixed(2) >= 7
 			) {
 				var temp = {};
 				temp['buyExchange'] = minimumBuy.market;
